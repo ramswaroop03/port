@@ -1,0 +1,72 @@
+/* Basic styling for loader */
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+.blob {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background: #3498db;
+    animation: blob-animation 1.5s infinite;
+}
+@keyframes blob-animation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.5);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Styling for tabs */
+.tabs {
+    display: flex;
+    cursor: pointer;
+    padding: 10px;
+    background-color: #f1f1f1;
+    border-bottom: 1px solid #ddd;
+}
+.tabs div {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-bottom: none;
+    background-color: #f1f1f1;
+}
+.tabs div.active {
+    background-color: #fff;
+    border-bottom: 1px solid #fff;
+    font-weight: bold;
+}
+
+/* Basic styling for forms */
+.form-content {
+    padding: 20px;
+    display: none;
+}
+.form-content.active {
+    display: block;
+}
+.button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.button:hover {
+    background-color: #2980b9;
+}

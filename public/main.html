@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>SRM VDP</title>
+    <link rel="stylesheet" href="../public/main.css"> <!-- Link to main.css -->
+    <link rel="icon" type="image/x-icon" href="../public/assets/ig.ico">
+</head>
+<body>
+    <div class="container">
+        <a href="../public/index.html">LOG OUT</a>
+        <h1 id="welcome-message"></h1> <!-- Placeholder for welcome message -->
+        <h2>Your department is <span id="dept"></span></h2> <!-- Placeholder for department -->
+        <h2>Your email is <span id="email"></span></h2> <!-- Placeholder for email -->
+        <hr>
+        <h2>B.TECH Computer Science Engineering - CyberSecurtiy & BDA</h2>
+        <hr>
+        <img src="https://i.imghippo.com/files/PYc4U1726552616.png" alt="" border="0">
+    </div>
+
+    <!-- Floating Form Section -->
+    <div class="floating-form">
+        <div class="form-section">
+        <h2>Submit Your Details</h2>
+        <div>
+            <label for="year">Select your year:</label>
+            <select id="year">
+                <option value="1">1st Year</option>
+                <option value="2">2nd Year</option>
+                <option value="3">3rd Year</option>
+                <option value="4">4th Year</option>
+            </select>
+        </div>
+        <div>
+            <label for="regNumber">Enter your Registration Number:</label>
+            <input type="text" id="regNumber" placeholder="Registration Number" required>
+        </div>
+        <div>
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password"> <!-- Allow user to enter password -->
+        </div>
+        <button onclick="submitForm()">Submit</button>
+        <br>
+        <pre>                    <a href="./forgotpassword.html"> forgot password?</a></pre>
+    </div>
+    </div>
+
+    <script src="../public/main.js"></script>
+    <script>
+        // Retrieve username and department from local storage and display them
+        const username = localStorage.getItem("username");
+        const dept = localStorage.getItem("dept"); // Assuming you also store dept in local storage
+        const email = localStorage.getItem("email"); // Retrieve email from local storage
+
+        document.getElementById("welcome-message").innerText = `Hello ${username}, WELCOME TO SRM VDP`;
+        document.getElementById("dept").innerText = dept; // Display department
+        document.getElementById("email").innerText = email; // Display email
+    </script>
+</body>
+</html>

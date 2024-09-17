@@ -1,0 +1,102 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #d2d3d8;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px; /* Set a max width for the container */
+    margin: 0 auto; /* Center the container */
+    padding: 20px; /* Add padding */
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Centering Form Elements */
+#verification-form {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+}
+
+/* Input Styles */
+input {
+    width: 150px;
+    height: 40px;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 12px;
+    transition: border-color 0.3s ease-in-out, border-radius 0.3s ease-in-out;
+}
+
+input:hover {
+    border-color: rgb(226, 13, 13);
+    border-radius: 22px;
+}
+
+#fullname, #email {
+    margin-bottom: 15px; /* Add margin between input fields */
+}
+
+/* Button Styles */
+.button {
+    display: inline-block;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none; /* Remove underline */
+    text-align: center;
+    transition: background-color 0.3s ease, border-radius 0.3s ease-in-out;
+}
+
+.button:hover {
+    background-color: #2980b9;
+    border-radius: 10px;
+}
+
+/* Loader Styles */
+.loader {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.blob {
+    width: 50px;
+    height: 50px;
+    background-color: #3498db;
+    border-radius: 50%;
+    animation: blob 1s infinite;
+}
+
+@keyframes blob {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .container {
+        padding: 10px; /* Reduce padding for mobile */
+    }
+
+    input, .button {
+        width: 100%; /* Make input fields and buttons full width on smaller screens */
+        box-sizing: border-box;
+    }
+}

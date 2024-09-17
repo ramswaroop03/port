@@ -1,0 +1,92 @@
+/* General Styles */
+.press-start-2p-regular {
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+body {
+    font-family: 'Press Start 2P', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #799e85;
+    color: #ece6e6;
+    line-height: 1.6;
+}
+
+header {
+    background: transparent;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: bold;
+    background-color: #51ddd6;
+}
+nav a.active{
+    background-color: #78f168;
+    text-decoration: italic;
+}
+
+main {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.profile-pic {
+    width: 150px; /* Set the width of the profile picture */
+    height: 150px; /* Set the height of the profile picture */
+    border-radius: 50%; /* Make the image circular */
+    margin-bottom: 20px;
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #34db74;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer:hover{
+    animation: footer-hover 1.0s ease-in-out;
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+}
+
+
