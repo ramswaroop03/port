@@ -11,7 +11,6 @@ let username = prompt("Enter your username");
 alert("Hello " + username + ", welcome to PYCHUNK");
 
 let generatedOTP; // Variable to store the generated OTP
-alert(`OTP : ${generatedOTP}`)
 
 // Function to send OTP via EmailJS
 function sendOTP() {
@@ -21,7 +20,6 @@ function sendOTP() {
     generatedOTP = Math.floor(100000 + Math.random() * 900000);
     console.log("Hello world!");
     console.log=(`Your OTP is ${generatedOTP}`);
-    alert(`OTP : ${generatedOTP}`)
     //using api
     var data = {
         service_id: 'pychunk',
@@ -39,7 +37,7 @@ function sendOTP() {
         data: JSON.stringify(data),
         contentType: 'application/json'
     }).done(function() {
-        alert(`OTP successfully sent ! OTP IS ${generatedOTP}`);
+        alert(`OTP successfully sent !`);
         document.getElementById("otp-section").style.display = "block"; // Show the OTP input section
     }).fail(function(error) {
         alert('Oops... ' + JSON.stringify(error));
